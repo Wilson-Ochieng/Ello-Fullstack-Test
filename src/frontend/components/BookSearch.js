@@ -5,7 +5,11 @@ const BookSearch = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
   const handleSearch = () => {
-    onSearch(query);
+    if(query.trim() !== ''){
+      onSearch(query);
+
+    }
+   
   };
 
   return (
@@ -15,9 +19,14 @@ const BookSearch = ({ onSearch }) => {
         variant="outlined"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        sx={{ backgroundColor: '#FFFFFF' }}
+        sx={{ backgroundColor: '#FFFFFF', width: '800px' }} 
       />
-      <Button variant="contained" color="primary" onClick={handleSearch}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleSearch}
+        sx={{ height: '3rem' }} 
+      >
         Search
       </Button>
     </Box>

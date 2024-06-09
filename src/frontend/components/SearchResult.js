@@ -1,14 +1,11 @@
 import React from 'react';
 import { List, ListItem, ListItemText, Button, ListItemAvatar, Avatar, Box,Typography } from '@mui/material';
-import Toast from './Toast';
-const SearchResult = ({ books, onAdd }) => {
-    console.log('Books data:', books);
-
-    // Check if books array is empty
-    if (books.length === 0) {
+const SearchResult = ({ books, onAdd,searchPerformed  }) => {
+    
+    if (searchPerformed && books.length === 0) {
         return (
             <Box mt={2}>
-                <Typography variant="body1">No books found.</Typography>
+                <Typography variant="body1">No book found.</Typography>
             </Box>
         );
     }
@@ -19,10 +16,10 @@ const SearchResult = ({ books, onAdd }) => {
                 {books.map((book, index) => (
                     <ListItem
                         key={index}
-                        sx={{ backgroundColor: '#CFFAFA', mb: 1, borderRadius: 1 }}
+                        sx={{ backgroundColor: '#FFFFFF', mb: 1, borderRadius: 1 }}
                     >
                         <ListItemAvatar>
-                            <Avatar src={`/assets/${book.coverPhotoURL}`} />
+                          <Avatar src={`../assets/${book.coverPhotoURL}`} />
                         </ListItemAvatar>
                         <ListItemText
                             primary={book.title}
@@ -32,7 +29,7 @@ const SearchResult = ({ books, onAdd }) => {
                             variant="contained"
                             color="primary"
                             onClick={() => onAdd(book)}
-                            sx={{ ml: 2 }}
+                            sx={{ ml: 2, borderColor: '#FABD33' }}
                         >
                             Add to Reading List
                         </Button>

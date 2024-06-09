@@ -8,7 +8,7 @@ const ReadingList = ({ readingList, onRemove }) => {
         {readingList.map((book, index) => (
           <ListItem
             key={index}
-            sx={{ backgroundColor: '#CFFAFA', mb: 1, borderRadius: 1 }}
+            sx={{ backgroundColor: '#FFFFFF', mb: 1, borderRadius: 1 }}
           >
             <ListItemAvatar>
               <Avatar src={`/assets/${book.coverPhotoURL}`} />

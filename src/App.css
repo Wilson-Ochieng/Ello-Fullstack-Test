@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Customize the success toast */
+.Toastify__toast--success {
+  background: #90caf9 !important; /* Light Blue */
+  color: #0d47a1 !important; /* Darker Blue Text */
+}
+
+/* Customize the warning toast */
+.Toastify__toast--warning {
+  background: #ffe082 !important; /* Light Yellow */
+  color: #ff6f00 !important; /* Orange Text */
+}
+
+/* Customize the success icon */
+.Toastify__toast--success .Toastify__toast-icon {
+  color: #0d47a1 !important; /* Darker Blue Icon */
+}
+
+/* Customize the warning icon */
+.Toastify__toast--warning .Toastify__toast-icon {
+  color: #ff6f00 !important; /* Orange Icon */
+}
+
+/* Optional: Add other custom styles as needed */
+.Toastify__toast-body {
+  font-family: 'Mulish', sans-serif;
+}
+
